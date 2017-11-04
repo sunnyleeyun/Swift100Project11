@@ -24,6 +24,21 @@ class ViewController: UIViewController {
   
   override func viewDidLoad() {
     super.viewDidLoad()
+    // Background set
+    do {
+      try AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback, with: .mixWithOthers)
+      print("AVAudioSession Category Playback OK")
+      do {
+        try AVAudioSession.sharedInstance().setActive(true)
+        print("AVAudioSession is Active")
+      } catch {
+        print(error)
+      }
+    } catch {
+      print(error)
+    }
+
+
     //初始化播放器
     let url = URL(string: "https://archive.org/download/testmp3testfile/mpthreetest.mp3")
     playerItem = AVPlayerItem(url: url!)
