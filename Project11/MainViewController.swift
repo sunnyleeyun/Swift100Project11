@@ -24,6 +24,8 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     super.viewDidLoad()
     
     gettingSongNames()
+    
+    audioPlayer.enableRate = true
     tableView.delegate = self
     tableView.dataSource = self
     // Do any additional setup after loading the view.

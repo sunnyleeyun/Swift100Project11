@@ -95,6 +95,7 @@
                                     <constraint firstAttribute="height" constant="34" id="WR7-7B-FaP"/>
                                     <constraint firstAttribute="width" constant="100" id="rco-E7-yCC"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="NEXT &gt;&gt;">
                                     <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -102,9 +103,12 @@
                                     <action selector="next:" destination="iu4-Jk-n8Y" eventType="touchUpInside" id="ubQ-qw-3cb"/>
                                 </connections>
                             </button>
-                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="hTl-VZ-DxQ">
-                                <rect key="frame" x="14" y="602" width="347" height="31"/>
+                            <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.5" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="hTl-VZ-DxQ">
+                                <rect key="frame" x="14" y="626" width="347" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="slider:" destination="iu4-Jk-n8Y" eventType="valueChanged" id="g6F-N7-UNk"/>
+                                </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zgb-c8-cvI">
                                 <rect key="frame" x="27" y="519" width="100" height="34"/>
@@ -112,6 +116,7 @@
                                     <constraint firstAttribute="width" constant="100" id="17C-nj-qxx"/>
                                     <constraint firstAttribute="height" constant="34" id="1LA-ZI-LzD"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="&lt;&lt; PREV">
                                     <color key="titleColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -119,6 +124,20 @@
                                     <action selector="previous:" destination="iu4-Jk-n8Y" eventType="touchUpInside" id="Dc7-Ca-8bT"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="速率：" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LI2-ws-y0f">
+                                <rect key="frame" x="16" y="597" width="52" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dSU-Bn-jeM">
+                                <rect key="frame" x="85" y="597" width="32" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -143,6 +162,8 @@
                         <outlet property="nextButton" destination="rEY-k1-Vpr" id="VRw-nw-Zqt"/>
                         <outlet property="playButton" destination="aE3-q6-crn" id="yZf-fL-UGy"/>
                         <outlet property="previousButton" destination="zgb-c8-cvI" id="UZM-1j-MA4"/>
+                        <outlet property="sliderOutlet" destination="hTl-VZ-DxQ" id="uEO-Kd-zXe"/>
+                        <outlet property="speed" destination="dSU-Bn-jeM" id="YEI-tJ-dkX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pdT-v8-9jw" userLabel="First Responder" sceneMemberID="firstResponder"/>
