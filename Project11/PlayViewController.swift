@@ -11,6 +11,9 @@ import AVFoundation
 
 class PlayViewController: UIViewController {
   
+  @IBOutlet weak var previousButton: UIButton!
+  @IBOutlet weak var nextButton: UIButton!
+  
   @IBOutlet weak var label: UILabel!
   @IBOutlet weak var Image: UIImageView!
   
@@ -20,6 +23,12 @@ class PlayViewController: UIViewController {
     
     playButton.layer.masksToBounds = true
     playButton.layer.cornerRadius = playButton.frame.width/2
+    
+    previousButton.layer.cornerRadius = 10
+    previousButton.clipsToBounds = true
+    
+    nextButton.layer.cornerRadius = 10
+    nextButton.clipsToBounds = true
     
     label.text = songs[thisSong]
 
@@ -35,10 +44,10 @@ class PlayViewController: UIViewController {
     if audioStuffed == true && audioPlayer.isPlaying == false
     {
       audioPlayer.play()
-      playButton.setTitle("Pause", for: .normal)
+      playButton.setTitle("PAUSE", for: .normal)
     } else if audioStuffed == true && audioPlayer.isPlaying {
       audioPlayer.pause()
-      playButton.setTitle("Play", for: .normal)
+      playButton.setTitle("PLAY", for: .normal)
     }
   }
   
