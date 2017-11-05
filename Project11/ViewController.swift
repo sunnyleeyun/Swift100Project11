@@ -112,7 +112,7 @@ class ViewController: UIViewController {
     if player!.rate == 0
     {
       player?.play()
-      playbutton.setTitle("暂停", for: .normal)
+      playbutton.setTitle("暫停", for: .normal)
     }
   }
   
@@ -120,7 +120,7 @@ class ViewController: UIViewController {
     //根据rate属性判断当天是否在播放
     if player?.rate == 0 {
       player!.play()
-      playbutton.setTitle("暂停", for: .normal)
+      playbutton.setTitle("暫停", for: .normal)
     } else {
       player!.pause()
       playbutton.setTitle("播放", for: .normal)
