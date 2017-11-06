@@ -14,9 +14,9 @@ var songs:[String] = []
 var thisSong = 0
 var audioStuffed = false
 
+
 class MainViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-  
-  
+
   
   @IBOutlet weak var tableView: UITableView!
   
@@ -25,7 +25,7 @@ class MainViewController: UIViewController, UITableViewDelegate, UITableViewData
     
     gettingSongNames()
     
-    audioPlayer.enableRate = true
+
     tableView.delegate = self
     tableView.dataSource = self
     // Do any additional setup after loading the view.

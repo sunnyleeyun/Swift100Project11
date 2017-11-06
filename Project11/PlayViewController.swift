@@ -17,8 +17,6 @@ class PlayViewController: UIViewController {
   @IBOutlet weak var label: UILabel!
   @IBOutlet weak var Image: UIImageView!
   
-  @IBOutlet weak var sliderOutlet: UISlider!
-  @IBOutlet weak var speed: UILabel!
   @IBOutlet weak var playButton: UIButton!
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -95,10 +93,7 @@ class PlayViewController: UIViewController {
     }
   }
   
-  @IBAction func slider(_ sender: Any) {
-    speed.text = String(format: "%.2f", sliderOutlet.value)
-    audioPlayer.rate = sliderOutlet.value
-  }
+  
   /*
    // MARK: - Navigation
    
